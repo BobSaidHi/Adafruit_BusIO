@@ -195,15 +195,16 @@ uint32_t Adafruit_BusIO_Register::readCached(void) { return _cached; }
  *    @brief  Read a buffer of data from the register location
  *    @param  buffer Pointer to data to read into
  *    @param  len Number of bytes to read
+ *    @param  stop Whether to send an I2C STOP signal between the address write and data read (Only applies to I2C)
  *    @return True on successful write (only really useful for I2C as SPI is
  * uncheckable)
  */
-bool Adafruit_BusIO_Register::read(uint8_t *buffer, uint8_t len) {
+bool Adafruit_BusIO_Register::read(uint8_t *buffer, uint8_t len, bool stop) {
   uint8_t addrbuffer[2] = {(uint8_t)(_address & 0xFF),
                            (uint8_t)(_address >> 8)};
 
   if (_i2cdevice) {
-    return _i2cdevice->write_then_read(addrbuffer, _addrwidth, buffer, len);
+    return _i2cdevice->write_then_read(addrbuffer, _addrwidth, buffer, len, stop);
   }
   if (_spidevice) {
     if (_spiregtype == ADDRESSED_OPCODE_BIT0_LOW_TO_WRITE) {

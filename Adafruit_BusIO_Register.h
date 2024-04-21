@@ -57,7 +57,7 @@ public:
                           uint8_t width = 1, uint8_t byteorder = LSBFIRST,
                           uint8_t address_width = 1);
 
-  bool read(uint8_t *buffer, uint8_t len);
+  bool read(uint8_t *buffer, uint8_t len, bool stop = false);
   bool read(uint8_t *value);
   bool read(uint16_t *value);
   uint32_t read(void);
