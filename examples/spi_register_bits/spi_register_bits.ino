@@ -5,7 +5,7 @@
 
   Designed specifically to work with the Adafruit RTD Sensor
   ----> https://www.adafruit.com/products/3328
-  uisng a MAX31865 RTD-to-Digital Converter
+  using a MAX31865 RTD-to-Digital Converter
   ----> https://datasheets.maximintegrated.com/en/ds/MAX31865.pdf
 
   This sensor uses SPI to communicate, 4 pins are required to
@@ -213,7 +213,7 @@ void loop() {
   // Is conversion ready?
   if (!digitalRead(MAX31865_READY_PIN))
 #else
-  // Warant conversion is ready.
+  // Warrant conversion is ready.
   delay(21); // 21ms for 50Hz-mode. 19ms in 60Hz-mode.
 #endif
   {

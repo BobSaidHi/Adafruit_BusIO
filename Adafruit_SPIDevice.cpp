@@ -491,7 +491,7 @@ bool Adafruit_SPIDevice::write_then_read(const uint8_t *write_buffer,
 
 /*!
  *    @brief  Write some data and read some data at the same time from SPI
- * into the same buffer, with transaction management. This is basicaly a wrapper
+ * into the same buffer, with transaction management. This is basically a wrapper
  * for transfer() with CS-pin and transaction management. This /does/
  * transmit-receive at the same time!
  *    @param  buffer Pointer to buffer of data to write/read to/from
