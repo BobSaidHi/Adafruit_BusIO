@@ -23,12 +23,14 @@
 #include <Adafruit_BusIO_Register.h>
 #include <Adafruit_SPIDevice.h>
 
-#define MAX31865_SPI_SPEED (5000000)
-#define MAX31865_SPI_BITORDER (SPI_BITORDER_MSBFIRST)
-#define MAX31865_SPI_MODE (SPI_MODE1)
+constexpr uint32_t MAX31865_SPI_SPEED = 5000000;
+constexpr BusIOBitOrder MAX31865_SPI_BITORDER = _BitOrder::SPI_BITORDER_MSBFIRST;
+constexpr uint8_t MAX31865_SPI_MODE = SPI_MODE1;
+static_assert(SPI_MODE1 < UINT8_MAX, "An uint8_t is too small for SPI_MODE1");
+static_assert(SPI_MODE1 >= 0, "SPI_MODE1 should be signed, not unsigned");
 
-#define MAX31865_SPI_CS (10)
-#define MAX31865_READY_PIN (2)
+constexpr uint8_t MAX31865_SPI_CS = 10;
+constexpr uint8_t MAX31865_READY_PIN = 2;
 
 Adafruit_SPIDevice spi_dev = Adafruit_SPIDevice(
     MAX31865_SPI_CS, MAX31865_SPI_SPEED, MAX31865_SPI_BITORDER,
@@ -248,7 +250,7 @@ float rRatio2C(uint16_t ratio) {
 
 // General purpose
 // *********************************************************************************************
-#define RINGLENGTH 250
+constexpr uint8_t RINGLENGTH = 250;
 float filterRing(float newVal) {
   static float ring[RINGLENGTH] = {0.0};
   static uint8_t ringIndex = 0;

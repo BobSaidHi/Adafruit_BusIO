@@ -1,6 +1,6 @@
 #include <Adafruit_I2CDevice.h>
 
-#define I2C_ADDRESS 0x60
+constexpr uint8_t I2C_ADDRESS = 0x60;
 Adafruit_I2CDevice i2c_dev = Adafruit_I2CDevice(I2C_ADDRESS);
 
 void setup() {

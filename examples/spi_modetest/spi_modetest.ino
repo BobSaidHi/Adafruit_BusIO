@@ -1,6 +1,6 @@
 #include <Adafruit_SPIDevice.h>
 
-#define SPIDEVICE_CS 10
+constexpr uint8_t SPIDEVICE_CS = 10;
 Adafruit_SPIDevice spi_dev =
     Adafruit_SPIDevice(SPIDEVICE_CS, 100000, SPI_BITORDER_MSBFIRST, SPI_MODE1);
 // Adafruit_SPIDevice spi_dev = Adafruit_SPIDevice(SPIDEVICE_CS, 13, 12, 11,

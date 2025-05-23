@@ -2,10 +2,10 @@
 
 // Define which interface to use by setting the unused interface to NULL!
 
-#define SPIDEVICE_CS 10
+constexpr uint8_t SPIDEVICE_CS = 10;
 Adafruit_SPIDevice *spi_dev = NULL; // new Adafruit_SPIDevice(SPIDEVICE_CS);
 
-#define I2C_ADDRESS 0x5D
+constexpr uint8_t I2C_ADDRESS = 0x5D;
 Adafruit_I2CDevice *i2c_dev = new Adafruit_I2CDevice(I2C_ADDRESS);
 
 void setup() {

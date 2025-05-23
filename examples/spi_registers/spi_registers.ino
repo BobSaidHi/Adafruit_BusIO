@@ -1,7 +1,7 @@
 #include <Adafruit_BusIO_Register.h>
 #include <Adafruit_SPIDevice.h>
 
-#define SPIDEVICE_CS 10
+constexpr uint8_t SPIDEVICE_CS = 10;
 Adafruit_SPIDevice spi_dev = Adafruit_SPIDevice(SPIDEVICE_CS);
 
 void setup() {
