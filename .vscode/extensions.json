@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+		"ms-vscode.cmake-tools",
+		"ms-vscode.makefile-tools",
+		"visualstudioexptteam.vscodeintellicode",
+        "ms-vscode.cpptools",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}
