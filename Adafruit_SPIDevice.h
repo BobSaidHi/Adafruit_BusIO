@@ -1,5 +1,4 @@
-#ifndef Adafruit_SPIDevice_h
-#define Adafruit_SPIDevice_h
+#pragma once
 
 #include <Arduino.h>
 
@@ -146,4 +145,3 @@ private:
   bool _begun;
 };
 
-#endif // Adafruit_SPIDevice_h

@@ -1,5 +1,4 @@
-#ifndef Adafruit_I2CDevice_h
-#define Adafruit_I2CDevice_h
+#pragma once
 
 #include <Arduino.h>
 #include <Wire.h>
@@ -33,4 +32,3 @@ private:
   bool _read(uint8_t *buffer, size_t len, bool stop);
 };
 
-#endif // Adafruit_I2CDevice_h

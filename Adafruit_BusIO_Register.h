@@ -1,5 +1,4 @@
-#ifndef Adafruit_BusIO_Register_h
-#define Adafruit_BusIO_Register_h
+#pragma once
 
 #include <Arduino.h>
 
@@ -108,4 +107,3 @@ private:
 };
 
 #endif // SPI exists
-#endif // BusIO_Register_h

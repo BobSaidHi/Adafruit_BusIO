@@ -1,5 +1,4 @@
-#ifndef ADAFRUIT_GENERICDEVICE_H
-#define ADAFRUIT_GENERICDEVICE_H
+#pragma once
 
 #include <Arduino.h>
 
@@ -51,5 +50,3 @@ protected:
 private:
   void *_obj; ///< Pointer to object instance
 };
-
-#endif // ADAFRUIT_GENERICDEVICE_H
